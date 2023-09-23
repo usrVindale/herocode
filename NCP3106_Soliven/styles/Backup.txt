@@ -1,0 +1,58 @@
+const int buzzerPin = 2; 
+const int ledOne = 8;
+const int ledTwo = 9;
+const int ledThree = 10;
+const int ledFour = 21;
+const int fstIr = 5;
+const int secIr = 6;
+const int thdIr = 7;
+
+void setup() {
+  pinMode(buzzerPin, OUTPUT);
+  pinMode(ledOne, OUTPUT);
+  pinMode(ledTwo, OUTPUT);
+  pinMode(ledThree, OUTPUT);
+  pinMode(ledFour, OUTPUT);
+  pinMode(fstIr, INPUT);
+  pinMode(secIr, INPUT);
+  pinMode(thdIr, INPUT);
+
+}
+
+void loop() {
+  if (digitalRead(fstIr) == 1){
+    digitalWrite(ledOne, LOW);
+  }
+   if (digitalRead(fstIr) == 0){
+    digitalWrite(ledOne, HIGH);
+  }
+  if (digitalRead(secIr) == 1){
+    digitalWrite(ledTwo, LOW);
+  }
+   if (digitalRead(secIr) == 0){
+    digitalWrite(ledTwo, HIGH);
+  }
+  if (digitalRead(thdIr) == 1){
+    digitalWrite(ledThree, LOW);
+  }
+   if (digitalRead(thdIr) == 0){
+    digitalWrite(ledThree, HIGH);
+    
+  }
+
+if (digitalRead(fstIr) == 0 && digitalRead(secIr) == 0 && digitalRead(thdIr) == 0) {
+  digitalWrite(buzzerPin, HIGH);
+  digitalWrite(ledFour, HIGH);  
+  delay(50);
+  digitalWrite(ledFour, LOW);  
+  delay(50);
+  digitalWrite(ledFour, HIGH);  
+  delay(50);
+  digitalWrite(ledFour, LOW);  
+  }
+  else{
+    noTone(buzzerPin);
+    digitalWrite(ledFour, LOW);
+  }
+
+}

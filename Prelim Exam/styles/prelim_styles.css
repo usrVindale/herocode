@@ -1,0 +1,227 @@
+ 
+ @font-face {
+    font-family: "Montserrat";  
+    src: url('montserrat.ttf') format('truetype');  
+  }
+
+  @font-face {
+    font-family: "Poppins";  
+    src: url('poppins.ttf') format('truetype');  
+  }
+
+ body {
+    margin: 0;
+    padding: 0;
+    position: relative; /* Position relative for pseudo-element overlay */
+     
+    
+}
+
+ 
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, #ffffff, #f2f2f2); /* Gradient overlay with image */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    z-index: -1; /* Place it below the content */
+}
+
+.navbar{
+    box-shadow: 0 12px 16px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+    left: 0;  
+    background-color: #ffffff; /* Replace with your desired color code */
+}
+
+.navbar .navbar-nav .nav-link{
+    font-family: 'Montserrat', sans-serif;
+    color: black
+}
+
+
+nav.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar .navbar-nav .nav-item.nav-link:hover,
+.navbar .navbar-nav .nav-item.nav-link:focus {
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.8); /* Adjust the glowing effect as needed */
+    transition: text-shadow 0.2s ease-in-out; /* Add a smooth transition */
+    color:grey;
+}
+ 
+.cards {
+    height: 500px;
+    background-image: url('homeCpe.png'); /* Replace 'your-image-url.jpg' with your image path */
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    color: white; /* Set text color to contrast with the background */
+}
+
+/* Center-align the text content inside the card */
+.center-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: flex-start; /* Align items to the left horizontally */
+    font-size: 50px;
+    padding-left: 20px; /* Adjust as needed to add some left padding */
+    height: 100%; /* Expand to the full height of the parent */
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-title {
+    font-size: 50px;
+    margin: 0; /* Remove default margin to prevent extra space */
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-text {
+    font-size: 17.5px;
+    margin: 0; 
+    font-family: 'Poppins', sans-serif;
+}
+
+.cpeTitle{
+    font-size: 50px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.subTitle{
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Poppins', sans-serif;
+}
+.cpeText {
+    text-align: justify;
+font-size: 20px;
+font-family: 'Poppins', sans-serif;
+}
+
+.whatCpe {
+    display: flex; /* Make the container a flex container */
+    align-items: center; /* Center vertically */
+}
+
+.typing-animation {
+    font-size: 50px;
+    font-family: "Montserrat", sans-serif;
+    white-space: nowrap; /* Prevent text from wrapping */
+    overflow: hidden; /* Hide overflowing text */
+    border-right: 2px solid #333; /* Create a typing cursor effect */
+    padding-right: 5px; /* Adjust cursor position */
+}
+
+.gifContainer {
+    margin-left: 20px; /* Add some margin to separate the text and GIF */
+}
+
+.card-img-top {
+    width: 250px !important;
+  
+}
+
+.card-img-bottom {
+    width: 250px !important;
+ 
+}
+ 
+.container-lg {
+    padding: 20px; /* Add some padding to the container */
+    
+}
+
+ 
+#myCarousel {
+    margin-bottom: 20px; /* Add spacing below the carousel */
+}
+
+/* Style the card group */
+.card-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px; /* Add padding to the card group */
+}
+
+.top-card {
+    width: 100%; /* Make the top card span the full width */
+    border-bottom: 20px solid transparent;
+}
+
+.bottom-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: calc(100% - 0px);  
+}
+
+.card {
+    flex: 0 0 calc(50% - 10px); /* 50% width for each card with spacing */
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Drop shadow */
+    padding: 20px;
+}
+
+/* Style the accordion */
+.accordion {
+    margin-top: 20px; /* Add spacing above the accordion */
+}
+
+/* Style the accordion buttons */
+.accordion-button {
+    background-color: #ff0000; /* Red background */
+    color: #fff; /* White text */
+}
+
+/* Style the active accordion button */
+.accordion-button.collapsed {
+    background-color: #ffffff; /* Red background */
+    color: #000000; /* White text */
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Style the accordion content */
+.accordion-collapse {
+    background-color: #fff; /* White background for content */
+    color: #000; /* Black text */
+}
+.card-body{
+    font-family: 'Poppins', sans-serif;
+}
+
+#background-shift {
+    background: linear-gradient(to bottom, #ffffff, #f2f2f2); /* Initial gradient background */
+    background-size: cover;
+    background-position: center;
+    min-height: 100vh;
+    position: relative;
+}
+
+/* Style for the video element */
+#background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.headings {
+    font-family: 'Poppins', sans-serif;
+}
+
+ 

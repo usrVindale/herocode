@@ -1,0 +1,69 @@
+ /* Reset default margin and padding for the whole page */
+ body {
+    margin: 0;
+    padding: 0;
+    position: relative; /* Position relative for pseudo-element overlay */
+}
+
+/* Create a blurry red to dark red and black background */
+body::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, rgba(255, 0, 0, 0.8), rgba(0, 0, 0, 0.8)), url(your-image.jpg); /* Gradient overlay with image */
+    backdrop-filter: blur(10px); /* Apply blur effect */
+    z-index: -1; /* Place it below the content */
+}
+
+
+/* Style the container */
+.container-lg {
+    padding: 20px; /* Add some padding to the container */
+}
+
+/* Style the carousel */
+#myCarousel {
+    margin-bottom: 20px; /* Add spacing below the carousel */
+}
+
+/* Style the card group */
+.card-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Space evenly between cards */
+    margin-bottom: 20px; /* Add spacing below the card group */
+}
+
+/* Style individual cards */
+.card {
+    width: 300px;
+    margin-bottom: 20px; /* Add spacing between cards */
+    background-color: #ff0000; /* Red background */
+    color: #000000; /* White text */
+}
+
+/* Style the accordion */
+.accordion {
+    margin-top: 20px; /* Add spacing above the accordion */
+}
+
+/* Style the accordion buttons */
+.accordion-button {
+    background-color: #ff0000; /* Red background */
+    color: #fff; /* White text */
+}
+
+/* Style the active accordion button */
+.accordion-button.collapsed {
+    background-color: #ff0000; /* Red background */
+    color: #fff; /* White text */
+}
+
+/* Style the accordion content */
+.accordion-collapse {
+    background-color: #fff; /* White background for content */
+    color: #000; /* Black text */
+}
